@@ -206,35 +206,19 @@ class Moon():
             self.x = -25
             self.coverage = 40
 
-class Sprite():
+class Sprite(pygame.sprite.Sprite):
 
-    def __init__(self, x_position):
-        self.x_position = x_position
+    def __init__(self, color, size):
+        self.color = color
+        self.size = size
+        pygame.sprite.Sprite.__init__(self)
 
     def draw_sprite(self):
-        def right_leg():
-            pygame.draw.rect(screen, BLACK, (self.x_position + 12, 510, 5, 20))
-        def left_leg():
-            pygame.draw.rect(screen, BLACK, (self.x_position + 12, 510, 5, 20))
-        
-        right_leg()
-        left_leg()
+        pygame.sprite.Sprite.draw(screen)
 
-        #pygame.transform.rotate(right_leg, 10)
-
-        pygame.draw.ellipse(screen, RED, (self.x_position, 490, 30, 30))
-        pygame.draw.ellipse(screen, BLACK, (self.x_position + 18, 498, 5, 5))
-
-    def move_sprite(self):
-        speed = 2
-        if self.x_position >= 400:
-            speed = 0
-        else:
-            self.x_position += speed
+    def check_sprite(self):
         
 
-
-ball1 = Sprite(-20)
 
 luna = Moon(-10, 160)
 
