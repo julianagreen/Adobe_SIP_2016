@@ -1,3 +1,11 @@
+.page{
+    display: none;
+}
+
+#projects{
+    display: block;
+}
+
 #navigation{
     text-align: center;
     color: rgb(100, 100, 100);
@@ -14,6 +22,9 @@ h1{
 }
 .project-section{
     display: none;
+}
+#wood{
+    display: block;
 }
 .project{
     display: inline-block;
@@ -45,10 +56,14 @@ h1{
 .dropdown-content{
     display: none;
     position: absolute;
-    left: 285px;
-    top: 70px;
+    left: 25%;
+    top: 11%;
     text-align: left;
     line-height: 1.1em;
+    cursor: pointer;
+}
+.dropdown-content p:hover{
+    color: rgb(28, 117, 25);
 }
 .dropdown-content a{
     display: block;
@@ -56,4 +71,30 @@ h1{
 .show{display:block;}
 .dropdown{
     display: inline-block;
+}
+.dropbtn{
+    cursor: pointer;
+}
+#contact_info{
+    color: rgb(50, 50, 50);
+    margin-left: 20%;
+}
+#image_1{
+    width: 99.9%;
+    opacity: .4;
+    position: fixed;
+}
+.about{
+    margin: 10px;
+    color: rgb(50, 50, 50);
+}
+.about_header{
+    /*position: absolute;*/
+}
+
+/*.project_title{
+    position: absolute;
+}*/
+.drop-item{
+    /*line-height: 30px;*/
 }
