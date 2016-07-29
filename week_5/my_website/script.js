@@ -1,3 +1,16 @@
+// window.onload = function(){
+//     $(".sideshow > div:gt(0)").hide();
+
+//     setInterval(function(){
+//         $(".slideshow > div:first")
+//             .fadeOut(1000)
+//             .next()
+//             .fadeIn(1000)
+//             .end()
+//             .appendTo(".slideshow");
+//     }, 3000);
+// }
+
 $(document).ready(function(){
     $('.drop-item').on('click', resetDisplay);
     $(".nav_item").on("click", nav_to_page);
@@ -5,10 +18,11 @@ $(document).ready(function(){
     fade_now();
 });
 
+
+
 function resetDisplay(event){
     $(".project-section").hide();
     var dropItem = $(this).html();
-    // var dropItem = event.target.innerHTML;
     if (dropItem == "Art Books"){
         $("#books").show();
     }
@@ -43,7 +57,7 @@ function fade_now(){
 
     $(hover_target).mouseleave(function(){
         $(this).fadeTo("slow", 1);
-        // $("#date").hide();
+        //$("#date").hide();
     });
 }
 
@@ -52,3 +66,9 @@ function nav_to_page(){
     var which_page = "#" + $(this).html();
     $(which_page).show();
 }
+
+
+
+// function switch_image(){
+
+// }
